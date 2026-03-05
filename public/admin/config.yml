@@ -1,0 +1,40 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "works"
+    label: "Tac Pham"
+    folder: "src/content/works"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Tieu de", name: "title", widget: "string" }
+      - { label: "Nam", name: "year", widget: "number" }
+      - label: "Danh muc"
+        name: "category"
+        widget: "select"
+        options:
+          - { label: "Phim", value: "film" }
+          - { label: "Music Video", value: "music-video" }
+          - { label: "Commercial", value: "commercial" }
+      - { label: "Vai tro", name: "role", widget: "string", hint: "VD: Director, Screenwriter" }
+      - { label: "Client / Nghe si", name: "client", widget: "string", required: false }
+      - { label: "Thoi luong", name: "duration", widget: "string", required: false, hint: "VD: 18 phut, 30 giay" }
+      - { label: "Thumbnail (16:9)", name: "thumbnail", widget: "image", required: false }
+      - { label: "Link video (YouTube / Vimeo)", name: "videoUrl", widget: "string", required: false }
+      - label: "Still Frames"
+        name: "stills"
+        widget: "list"
+        required: false
+        field:
+          label: "Anh"
+          name: "still"
+          widget: "image"
+      - { label: "Mo ta ngan (SEO)", name: "description", widget: "text" }
+      - { label: "Noi dung thong tin tac pham", name: "body", widget: "markdown" }
+      - { label: "Featured", name: "featured", widget: "boolean", default: false }
+      - { label: "Ngay", name: "pubDate", widget: "datetime" }
