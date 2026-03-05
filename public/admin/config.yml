@@ -1,3 +1,5 @@
+site_url: https://le-diem-quynh-portfolio.netlify.app
+
 backend:
   name: git-gateway
   branch: main
