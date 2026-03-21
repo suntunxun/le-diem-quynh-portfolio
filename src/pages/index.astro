@@ -52,12 +52,20 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 			</nav>
 		</main>
 
-		<script>
-			const identity = (window as any).netlifyIdentity;
-			if (identity) {
-				identity.on('init', (user: any) => {
+		<script is:inline>
+			// Redirect Netlify Identity tokens to /admin/ for handling
+			if (window.location.hash && (
+				window.location.hash.includes('invite_token=') ||
+				window.location.hash.includes('recovery_token=') ||
+				window.location.hash.includes('confirmation_token=')
+			)) {
+				window.location.href = '/admin/' + window.location.hash;
+			}
+
+			if (window.netlifyIdentity) {
+				window.netlifyIdentity.on('init', function(user) {
 					if (!user) {
-						identity.on('login', () => {
+						window.netlifyIdentity.on('login', function() {
 							document.location.href = '/admin/';
 						});
 					}
