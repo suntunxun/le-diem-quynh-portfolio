@@ -4,15 +4,25 @@ year: 2025
 category: film
 role: Director, Screenwriter
 duration: 29:59
-thumbnail: https://media.lediemquynh.com/film/phia-sau-nguoi-linh/bts/psnl-bts-1.jpeg
-videoUrl: https://youtu.be/Udc6MAAZT30?si=B7xGCcIzA7Tl9R1H
+thumbnail: https://media.lediemquynh.com/film/phia-sau-nguoi-linh/thumbnail/psnl-thumbnail.jpeg
+videoUrl: https://www.facebook.com/share/v/1C6KFQyWG4/
 stills:
-  - https://media.lediemquynh.com/film/phia-sau-nguoi-linh/bts/psnl-bts-2.jpeg
-  - https://media.lediemquynh.com/film/phia-sau-nguoi-linh/bts/psnl-bts-1.jpeg
-  - https://media.lediemquynh.com/film/phia-sau-nguoi-linh/bts/psnl-bts-3.jpeg
-description: Meo meomeomeo
+  - https://media.lediemquynh.com/film/phia-sau-nguoi-linh/stills/psnl-still-1.jpeg
+  - https://media.lediemquynh.com/film/phia-sau-nguoi-linh/stills/psnl-still-2.jpeg
+  - https://media.lediemquynh.com/film/phia-sau-nguoi-linh/stills/psnl-still-3.jpeg
+  - https://media.lediemquynh.com/film/phia-sau-nguoi-linh/stills/psnl-still-5.jpeg
+  - https://media.lediemquynh.com/film/phia-sau-nguoi-linh/stills/psnl-still-6.jpeg
+  - https://media.lediemquynh.com/film/phia-sau-nguoi-linh/stills/psnl-still-7.jpeg
+  - https://media.lediemquynh.com/film/phia-sau-nguoi-linh/stills/psnl-still-10.jpeg
+  - https://media.lediemquynh.com/film/phia-sau-nguoi-linh/stills/psnl-still-11.jpeg
+  - https://media.lediemquynh.com/film/phia-sau-nguoi-linh/stills/psnl-still-12.jpeg
+  - https://media.lediemquynh.com/film/phia-sau-nguoi-linh/stills/psnl-still-13.jpeg
+  - https://media.lediemquynh.com/film/phia-sau-nguoi-linh/stills/psnl-still-14.jpeg
+  - https://media.lediemquynh.com/film/phia-sau-nguoi-linh/stills/psnl-still-8.jpeg
+description: Một nhà văn già trước khi trút hơi thở cuối cùng kể lại về
+  hành trình tham gia chiến tranh để viết quyển sách cuối cùng của ông
+  dành tặng người vợ đã khuất.
 featured: true
 pubDate: 1901-01-04T17:55:00.000+07:00
 ---
-
-**Giua Hai Bo** dua nguoi xem tro ve vung bien mien Trung, noi nhung nguoi nghe nhan gia dang cuoc dau tranh giu gian nghe truyen thong.
+**Một bộ phim ngắn dành tặng gia đình và ông nội.**
