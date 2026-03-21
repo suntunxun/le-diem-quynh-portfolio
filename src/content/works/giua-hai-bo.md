@@ -26,3 +26,5 @@ featured: true
 pubDate: 1901-01-04T17:55:00.000+07:00
 ---
 **Một bộ phim ngắn dành tặng gia đình và ông nội.**
+
+**Một nhà văn già trước khi trút hơi thở cuối cùng kể lại về hành trình tham gia chiến tranh để viết quyển sách cuối cùng của ông dành tặng người vợ đã khuất.**
