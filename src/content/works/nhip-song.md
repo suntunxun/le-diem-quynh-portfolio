@@ -1,13 +1,12 @@
 ---
-title: "Nhip Song"
-year: 2023
-category: "music-video"
-role: "Director"
-client: "Artist: Hoang Ton"
-videoUrl: ""
-description: "Music video cho ca khuc 'Nhip Song' cua ca si Hoang Ton — hanh trinh mot ngay trong cuoc song do thi."
-featured: false
-pubDate: 2023-05-20
+title: Nỗi Đau Giữa Hòa Bình (Hòa Minzy)
+year: 2025
+category: music-video
+role: Personal Director's Assistant
+client: Hòa Minzy
+videoUrl: https://youtu.be/yHikkFeIHNA?si=QYqsD-ymXyDTyWst
+description: OST Phim Điện Ảnh Mưa Đỏ
+featured: true
+pubDate: 2026-03-21T22:56:00.000+07:00
 ---
-
-Music video **Nhip Song** khai thac nhip dieu cua cuoc song Sai Gon qua lang kinh cua mot nguoi tre.
+Personal Director's Assistant
