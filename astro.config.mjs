@@ -6,6 +6,6 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://le-diem-quynh-portfolio.netlify.app',
+	site: 'https://lediemquynh.com',
 	integrations: [mdx(), sitemap()],
 });
