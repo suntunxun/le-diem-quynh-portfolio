@@ -125,6 +125,10 @@ _inputs:
   title:
     type: text
     comment: The title of the page or post.
+  order:
+    type: number
+    label: Display Order
+    comment: Nhập số (1, 2, 3...). Số nhỏ nhất sẽ hiện đầu tiên.
   description:
     type: textarea
     comment: A brief summary for SEO purposes.
