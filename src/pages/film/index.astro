@@ -7,8 +7,7 @@ import { getCollection } from 'astro:content';
 
 import { slugify } from '../../utils/slugify';
 
-const works = (await getCollection('works'))
-	.filter((w: any) => w.data.category === 'film')
+const works = (await getCollection('film'))
 	.sort((a: any, b: any) => {
 		if (a.data.order !== b.data.order) {
 			return a.data.order - b.data.order;

@@ -7,8 +7,7 @@ import { getCollection, render } from 'astro:content';
 import { slugify } from '../../utils/slugify';
 
 export async function getStaticPaths() {
-	const all = (await getCollection('works'))
-		.filter((w: any) => w.data.category === 'commercial')
+	const all = (await getCollection('commercial'))
 		.sort((a: any, b: any) => {
 			if (a.data.order !== b.data.order) {
 				return a.data.order - b.data.order;
@@ -20,8 +19,8 @@ export async function getStaticPaths() {
 		const total = all.length;
 		const prevWork = total > 1 ? all[(i - 1 + total) % total] : null;
 		const nextWork = total > 1 ? all[(i + 1) % total] : null;
-		
-		const currentSlug = work.data.slug ? slugify(work.data.slug) : slugify(work.id);
+
+		const currentSlug = slugify(work.data.title);
 
 		return {
 			params: { slug: currentSlug },
@@ -29,6 +28,7 @@ export async function getStaticPaths() {
 		};
 	});
 }
+
 
 const { work, prevWork, nextWork } = Astro.props;
 const { Content } = await render(work);

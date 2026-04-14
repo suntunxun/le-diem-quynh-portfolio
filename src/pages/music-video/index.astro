@@ -6,8 +6,7 @@ import { SITE_TITLE } from '../../consts';
 import { getCollection } from 'astro:content';
 import { slugify } from '../../utils/slugify';
 
-const works = (await getCollection('works'))
-	.filter((w: any) => w.data.category === 'music-video')
+const works = (await getCollection('music-video'))
 	.sort((a: any, b: any) => {
 		if (a.data.order !== b.data.order) {
 			return a.data.order - b.data.order;
