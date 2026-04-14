@@ -34,9 +34,13 @@ collections_config:
     url: /works/[slug]/
     icon: work
     reorderable: true
+    sort: order
     sort_options:
       - label: Manual Order
         value: order
+        order: asc
+      - label: Title
+        value: title
         order: asc
     schema:
       path: src/content/works/anh-duong-happiness-hạnh-phúc-của-ánh-dương.md
