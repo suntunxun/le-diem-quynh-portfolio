@@ -225,7 +225,8 @@ _inputs:
   heroImage:
     type: image
   thumbnail:
-    type: image
+    type: text
+    comment: URL của ảnh thumbnail (có thể paste link hoặc upload lên CDN trước)
   stills:
     type: array
     field:
