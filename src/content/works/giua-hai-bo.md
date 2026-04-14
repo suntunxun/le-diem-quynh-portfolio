@@ -1,4 +1,5 @@
 ---
+slug: giua-hai-bo
 order: 999
 title: Phía Sau Người Lính (Behind The Solider)
 year: 2025

@@ -1,4 +1,5 @@
 ---
+slug: trộm-vía-vũ-thùy-linh
 order: 999
 title: Trộm Vía (Vũ Thùy Linh)
 year: 2025

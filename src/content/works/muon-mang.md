@@ -1,4 +1,5 @@
 ---
+slug: muon-mang
 order: 999
 title: Karma
 year: 2024

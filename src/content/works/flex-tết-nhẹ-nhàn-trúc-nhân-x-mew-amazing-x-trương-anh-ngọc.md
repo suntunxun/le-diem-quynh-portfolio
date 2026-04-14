@@ -1,4 +1,5 @@
 ---
+slug: flex-tết-nhẹ-nhàn-trúc-nhân-x-mew-amazing-x-trương-anh-ngọc
 order: 999
 title: "FLEX TẾT NHẸ - NHÀN: TRÚC NHÂN x MEW AMAZING x TRƯƠNG ANH NGỌC"
 year: 2026

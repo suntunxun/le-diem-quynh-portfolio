@@ -5,6 +5,8 @@ import Header from '../../components/Header.astro';
 import { SITE_TITLE } from '../../consts';
 import { getCollection } from 'astro:content';
 
+import { slugify } from '../../utils/slugify';
+
 const works = (await getCollection('works'))
 	.filter((w: any) => w.data.category === 'film')
 	.sort((a: any, b: any) => {
@@ -29,7 +31,7 @@ const works = (await getCollection('works'))
 			</div>
 			<div class="grid">
 				{works.map((work: any) => (
-					<a href={`/film/${work.id}`} class="card">
+					<a href={`/film/${slugify(work.data.slug || work.id)}`} class="card">
 						<div class="thumb">
 							{work.data.thumbnail
 								? <img src={work.data.thumbnail} alt={work.data.title} loading="lazy" />

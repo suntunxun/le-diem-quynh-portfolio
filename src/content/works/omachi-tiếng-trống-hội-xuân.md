@@ -1,4 +1,5 @@
 ---
+slug: omachi-tiếng-trống-hội-xuân
 order: 999
 title: OMACHI - TIẾNG TRỐNG HỘI XUÂN
 year: 2026

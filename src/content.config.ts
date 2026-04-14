@@ -17,6 +17,7 @@ const works = defineCollection({
 	loader: glob({ base: './src/content/works', pattern: '**/*.{md,mdx}' }),
 	schema: z.object({
 		title: z.string(),
+		slug: z.string().optional(),
 		year: z.number(),
 		order: z.number().default(999),
 		category: z.enum(['film', 'music-video', 'commercial']),

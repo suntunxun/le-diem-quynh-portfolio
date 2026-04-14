@@ -1,4 +1,5 @@
 ---
+slug: sample-commercial
 order: 999
 title: NANOCO SÁNG MỌI KHOẢNH KHẮC, TỎA KHẮP NĂM CHÂU
 year: 2025

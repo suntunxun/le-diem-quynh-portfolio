@@ -4,18 +4,27 @@ import BaseHead from '../../components/BaseHead.astro';
 import Header from '../../components/Header.astro';
 import { SITE_TITLE } from '../../consts';
 import { getCollection, render } from 'astro:content';
+import { slugify } from '../../utils/slugify';
 
 export async function getStaticPaths() {
 	const all = (await getCollection('works'))
 		.filter((w: any) => w.data.category === 'music-video')
-		.sort((a: any, b: any) => b.data.year - a.data.year);
+		.sort((a: any, b: any) => {
+			if (a.data.order !== b.data.order) {
+				return a.data.order - b.data.order;
+			}
+			return b.data.year - a.data.year;
+		});
 
 	return all.map((work: any, i: number) => {
 		const total = all.length;
 		const prevWork = total > 1 ? all[(i - 1 + total) % total] : null;
 		const nextWork = total > 1 ? all[(i + 1) % total] : null;
+		
+		const currentSlug = work.data.slug ? slugify(work.data.slug) : slugify(work.id);
+
 		return {
-			params: { slug: work.id },
+			params: { slug: currentSlug },
 			props: { work, prevWork, nextWork },
 		};
 	});
@@ -90,11 +99,11 @@ const stills: string[] = work.data.stills ?? [];
 
 		<footer class="project-nav">
 			{prevWork
-				? <a href={`/music-video/${prevWork.id}`} class="nav-link nav-prev">← Previous Project</a>
+				? <a href={`/music-video/${slugify(prevWork.data.slug || prevWork.id)}`} class="nav-link nav-prev">← Previous Project</a>
 				: <span />
 			}
 			{nextWork
-				? <a href={`/music-video/${nextWork.id}`} class="nav-link nav-next">Next Project →</a>
+				? <a href={`/music-video/${slugify(nextWork.data.slug || nextWork.id)}`} class="nav-link nav-next">Next Project →</a>
 				: <span />
 			}
 		</footer>

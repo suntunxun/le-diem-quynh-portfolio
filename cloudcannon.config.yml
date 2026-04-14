@@ -48,6 +48,13 @@ collections_config:
       - name: title
         label: Title
         type: text
+      - name: slug
+        label: URL Slug (Auto-generated)
+        type: slug
+        options:
+          from: title
+          separator: "-"
+          lowercase: true
       - name: order
         label: Display Order (1 = first)
         type: number

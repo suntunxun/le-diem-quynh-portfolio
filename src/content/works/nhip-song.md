@@ -1,4 +1,5 @@
 ---
+slug: nhip-song
 order: 999
 title: Nỗi Đau Giữa Hòa Bình (Hòa Minzy)
 year: 2025

@@ -1,4 +1,5 @@
 ---
+slug: hoi-uc-nguoi-linh
 order: 999
 title: Hoi Uc Nguoi Linh
 year: 2025

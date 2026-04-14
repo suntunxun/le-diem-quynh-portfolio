@@ -4,10 +4,16 @@ import BaseHead from '../../components/BaseHead.astro';
 import Header from '../../components/Header.astro';
 import { SITE_TITLE } from '../../consts';
 import { getCollection } from 'astro:content';
+import { slugify } from '../../utils/slugify';
 
 const works = (await getCollection('works'))
 	.filter((w: any) => w.data.category === 'music-video')
-	.sort((a: any, b: any) => b.data.year - a.data.year);
+	.sort((a: any, b: any) => {
+		if (a.data.order !== b.data.order) {
+			return a.data.order - b.data.order;
+		}
+		return b.data.year - a.data.year;
+	});
 ---
 
 <!doctype html>
@@ -24,7 +30,7 @@ const works = (await getCollection('works'))
 			</div>
 			<div class="grid">
 				{works.map((work: any) => (
-					<a href={`/music-video/${work.id}`} class="card">
+					<a href={`/music-video/${slugify(work.data.slug || work.id)}`} class="card">
 						<div class="thumb">
 							{work.data.thumbnail
 								? <img src={work.data.thumbnail} alt={work.data.title} loading="lazy" />
@@ -44,9 +50,7 @@ const works = (await getCollection('works'))
 
 <style>
 	main {
-		max-width: 1800px;
-		margin: 0 auto;
-		padding: 3rem 5% 6rem;
+		/* Inherit from global.css */
 	}
 	.page-header h1 {
 		font-size: 2.2rem;
@@ -75,13 +79,11 @@ const works = (await getCollection('works'))
 		aspect-ratio: 16 / 9;
 		overflow: hidden;
 		background: #111;
-		border-radius: 4px;
 	}
 	.thumb img {
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
-		border-radius: 2px;
 		transition: opacity 0.2s;
 		display: block;
 	}
@@ -111,9 +113,6 @@ const works = (await getCollection('works'))
 		}
 	}
 	@media (max-width: 768px) {
-		main {
-			padding: 2rem 1.5rem 4rem;
-		}
 		.grid {
 			grid-template-columns: repeat(2, 1fr);
 			gap: 1.5rem 1rem;
