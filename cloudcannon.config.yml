@@ -26,12 +26,9 @@ collections_config:
         label: Title
         type: text
       - name: slug
-        label: URL Slug (Auto-generated)
-        type: slug
-        options:
-          from: title
-          separator: "-"
-          lowercase: true
+        label: URL Slug
+        type: text
+        comment: Nhập slug cho URL (ví dụ: phim-cua-toi). Không dùng dấu, khoảng trắng.
       - name: order
         label: Display Order (1 = first)
         type: number
@@ -53,6 +50,7 @@ collections_config:
       - name: thumbnail
         label: Thumbnail URL
         type: text
+        comment: Paste URL ảnh thumbnail (ví dụ từ media.lediemquynh.com)
       - name: videoUrl
         label: Video URL (YouTube/Vimeo)
         type: text
@@ -91,12 +89,9 @@ collections_config:
         label: Title
         type: text
       - name: slug
-        label: URL Slug (Auto-generated)
-        type: slug
-        options:
-          from: title
-          separator: "-"
-          lowercase: true
+        label: URL Slug
+        type: text
+        comment: Nhập slug cho URL (ví dụ: phim-cua-toi). Không dùng dấu, khoảng trắng.
       - name: order
         label: Display Order (1 = first)
         type: number
@@ -121,6 +116,7 @@ collections_config:
       - name: thumbnail
         label: Thumbnail URL
         type: text
+        comment: Paste URL ảnh thumbnail (ví dụ từ media.lediemquynh.com)
       - name: videoUrl
         label: Video URL (YouTube/Vimeo)
         type: text
@@ -159,12 +155,9 @@ collections_config:
         label: Title
         type: text
       - name: slug
-        label: URL Slug (Auto-generated)
-        type: slug
-        options:
-          from: title
-          separator: "-"
-          lowercase: true
+        label: URL Slug
+        type: text
+        comment: Nhập slug cho URL (ví dụ: phim-cua-toi). Không dùng dấu, khoảng trắng.
       - name: order
         label: Display Order (1 = first)
         type: number
@@ -189,6 +182,7 @@ collections_config:
       - name: thumbnail
         label: Thumbnail URL
         type: text
+        comment: Paste URL ảnh thumbnail (ví dụ từ media.lediemquynh.com)
       - name: videoUrl
         label: Video URL (YouTube/Vimeo)
         type: text

@@ -3,7 +3,7 @@ import { glob } from 'astro/loaders';
 
 const worksSchema = z.object({
 	title: z.string(),
-	slug: z.string().optional(),
+	slug: z.string(),
 	year: z.number(),
 	order: z.number().default(999),
 	category: z.enum(['film', 'music-video', 'commercial']),
