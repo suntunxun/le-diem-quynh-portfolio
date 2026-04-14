@@ -99,11 +99,11 @@ const stills: string[] = work.data.stills ?? [];
 
 		<footer class="project-nav">
 			{prevWork
-				? <a href={`/film/${slugify(prevWork.data.slug || prevWork.id)}`} class="nav-link nav-prev">← Previous Project</a>
+				? <a href={`/film/${slugify(prevWork.data.title)}`} class="nav-link nav-prev">← Previous Project</a>
 				: <span />
 			}
 			{nextWork
-				? <a href={`/film/${slugify(nextWork.data.slug || nextWork.id)}`} class="nav-link nav-next">Next Project →</a>
+				? <a href={`/film/${slugify(nextWork.data.title)}`} class="nav-link nav-next">Next Project →</a>
 				: <span />
 			}
 		</footer>

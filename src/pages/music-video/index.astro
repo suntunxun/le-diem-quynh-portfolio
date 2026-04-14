@@ -30,7 +30,7 @@ const works = (await getCollection('works'))
 			</div>
 			<div class="grid">
 				{works.map((work: any) => (
-					<a href={`/music-video/${slugify(work.data.slug || work.id)}`} class="card">
+					<a href={`/music-video/${slugify(work.data.title)}`} class="card">
 						<div class="thumb">
 							{work.data.thumbnail
 								? <img src={work.data.thumbnail} alt={work.data.title} loading="lazy" />
