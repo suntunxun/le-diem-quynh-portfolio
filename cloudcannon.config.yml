@@ -1,21 +1,151 @@
+# CloudCannon Configuration
+# Documentation: https://cloudcannon.com/documentation/articles/cloudcannon-configuration-file/
+
 paths:
   static: public
   uploads: public/uploads
 timezone: Asia/Saigon
-markdown:
-  engine: commonmark
-  options:
-    gfm: true
+
 collections_config:
-  pages:
-    path: src/pages
-    icon: wysiwyg
   blog:
     path: src/content/blog
-    icon: event_available
-  films:
-    path: src/content/films
-    icon: files
+    output: true
+    url: /blog/[slug]/
+    icon: article
+    schema:
+      path: src/content/blog/first-post.md
+    fields:
+      - name: title
+        label: Title
+        type: text
+      - name: description
+        label: Description
+        type: textarea
+      - name: pubDate
+        label: Publication Date
+        type: date
+      - name: heroImage
+        label: Hero Image
+        type: image
+
   works:
     path: src/content/works
+    output: true
+    url: /works/[slug]/
     icon: work
+    schema:
+      path: src/content/works/anh-duong-happiness-hạnh-phúc-của-ánh-dương.md
+    fields:
+      - name: title
+        label: Title
+        type: text
+      - name: year
+        label: Year
+        type: number
+      - name: category
+        label: Category
+        type: select
+        options:
+          values:
+            - film
+            - music-video
+            - commercial
+      - name: role
+        label: Role
+        type: text
+      - name: client
+        label: Client / Artist
+        type: text
+      - name: duration
+        label: Duration
+        type: text
+      - name: thumbnail
+        label: Thumbnail URL
+        type: text
+      - name: videoUrl
+        label: Video URL (YouTube/Vimeo)
+        type: text
+      - name: stills
+        label: Stills
+        type: array
+        field:
+          type: text
+          label: Still URL
+      - name: description
+        label: SEO Description
+        type: textarea
+      - name: featured
+        label: Featured
+        type: checkbox
+      - name: pubDate
+        label: Publication Date
+        type: date
+
+  films:
+    path: src/content/films
+    output: true
+    url: /films/[slug]/
+    icon: movie
+    schema:
+      path: src/content/films/muon-mang.md
+    fields:
+      - name: title
+        label: Title
+        type: text
+      - name: year
+        label: Year
+        type: number
+      - name: genre
+        label: Genre
+        type: text
+      - name: role
+        label: Role
+        type: text
+      - name: duration
+        label: Duration
+        type: text
+      - name: videoUrl
+        label: Video URL
+        type: text
+      - name: description
+        label: Description
+        type: textarea
+      - name: featured
+        label: Featured
+        type: checkbox
+      - name: pubDate
+        label: Publication Date
+        type: date
+
+# CloudCannon UI refinements
+_inputs:
+  title:
+    type: text
+    comment: The title of the page or post.
+  description:
+    type: textarea
+    comment: A brief summary for SEO purposes.
+  pubDate:
+    type: date
+  heroImage:
+    type: image
+  thumbnail:
+    type: image
+  stills:
+    type: array
+    field:
+      type: image
+  category:
+    type: select
+    options:
+      values:
+        - film
+        - music-video
+        - commercial
+
+# Build options for Astro
+_build_options:
+  server:
+    command: npm run build
+    output: dist
+    base_url: /
