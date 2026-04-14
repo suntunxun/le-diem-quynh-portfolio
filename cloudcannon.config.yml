@@ -39,6 +39,9 @@ collections_config:
       - name: title
         label: Title
         type: text
+      - name: order
+        label: Display Order (1 = first)
+        type: number
       - name: year
         label: Year
         type: number

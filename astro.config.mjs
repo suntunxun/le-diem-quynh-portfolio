@@ -12,5 +12,10 @@ export default defineConfig({
 	output: 'server',
 	adapter: cloudflare({ imageService: 'compile' }),
 	integrations: [mdx(), react(), sitemap()],
+	vite: {
+		server: {
+			allowedHosts: ['corrosive-owl-unnatural.ngrok-free.dev'],
+		},
+	},
 });
 

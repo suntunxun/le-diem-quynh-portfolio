@@ -18,6 +18,7 @@ const works = defineCollection({
 	schema: z.object({
 		title: z.string(),
 		year: z.number(),
+		order: z.number().default(999),
 		category: z.enum(['film', 'music-video', 'commercial']),
 		role: z.string(),
 		client: z.string().optional(),
